@@ -7,6 +7,8 @@
     background-color: #222222;
     padding-left: 12%;
     padding-right: 12%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
@@ -16,7 +18,9 @@
     margin-bottom: 1%;
     width: 34%;
     height: 100%;
-    flex-shrink: 0;
+    display: flex;
+    justify-self: start;
+    align-self: center;
 }
 
 .search__header {
@@ -25,12 +29,36 @@
     flex-shrink: 0;
     padding-left: 2%;
     padding-bottom: 1%;
+    display: flex;
+    justify-self: start;
+    align-self: center;
 }
 
-.icons__header {
-    width: 150%;
-    height: 80%;
+.icon_menu__header {
+    width: 32%;
+    height: 100%;
+    grid-column-end: -3;
+    display: flex;
+    justify-self: end;
+    align-self: center;
+}
+
+.icon_character__header {
+    width: 32%;
+    height: 100%;
+    grid-column-end: -2;
+    display: flex;
+    justify-self: end;
+    align-self: center;
+}
+
+.icon_shop__header {
+    width: 32%;
+    height: 100%;
     grid-column-end: -1;
+    display: flex;
+    justify-self: end;
+    align-self: center;
 }
 
 .title_hello {
@@ -88,24 +116,30 @@
     margin-top: 3%;
     display: grid;
     grid-template-columns: 14% 1fr 1fr 1fr 14%;
-    grid-template-rows: 300px 200px;
+    grid-template-rows: 260px 130px;
     gap: 1%;
 }
 
 .woman {
     grid-column-start: 2;
     position: relative;
+    display: flex;
+    justify-content: space-around;
 }
 
 .woman .sales_for_woman {
     position: absolute;
     filter: brightness(40%);
+    width: 100%;
+    height: 100%;
 }
 
 .woman .text_image {
-    position: relative;
+    position: absolute;
     text-align: center;
-    margin-top: 30%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
 }
 
 .p_sales {
@@ -131,52 +165,71 @@
 .man {
     grid-column-start: 3;
     position: relative;
+    display: flex;
+    justify-content: space-around;
 }
 
 .man .sales_for_men {
     position: absolute;
     filter: brightness(40%);
+    width: 100%;
+    height: 100%;
 }
 
 .man .text_image {
-    position: relative;
+    position: absolute;
     text-align: center;
-    margin-top: 30%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
 }
 
 .kids {
     grid-column-start: 4;
     position: relative;
+    display: flex;
+    justify-content: space-around;
 }
 
 .kids .sales_for_kids {
     position: absolute;
     filter: brightness(40%);
+    width: 100%;
+    height: 100%;
 }
 
 .kids .text_image {
-    position: relative;
+    position: absolute;
     text-align: center;
-    margin-top: 30%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
 }
 
 .accessories {
+    padding-top: 3%;
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 2;
     position: relative;
+    display: flex;
+    justify-content: space-around;
 }
 
 .accessories .sales_accessories {
     position: absolute;
     filter: brightness(40%);
+    width: 100%;
+    height: 100%;
 }
 
 .accessories .text_image {
-    position: relative;
+    padding-top: 3%;
+    position: absolute;
     text-align: center;
-    margin-top: 9%;
-    margin-left: 40%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
 }
 
 .title {
@@ -219,12 +272,19 @@
     background-color: #F7E4E2;
     grid-column-start: 3;
     display: flex;
+    justify-content: center;
 }
 
 .shop_grid .img_shop_2 {
     grid-column-start: 3;
+    display: flex;
     padding-left: 30%;
+    justify-self: center;
     align-self: center;
+}
+
+.add_to_cart {
+    visibility: hidden;
 }
 
 .shop_grid .shop_grid_img_3 {
@@ -479,10 +539,11 @@
 
 .view_all__footer {
     border-color: #FF6A6A;
+    border: 1%;
     border-radius: 0;
     width: 212px;
     height: 48px;
-    background-color: #FFF;
+    background-color: #FFFFFF;
     margin-top: 5%;
     margin-bottom: 6%;
     margin-left: 44%;
@@ -494,66 +555,102 @@
     line-height: normal;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .header {
         background-color: #222222;
-        padding-left: 12%;
-        padding-right: 12%;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 2%;
+        padding-bottom: 2%;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
     }
     .logo__header {
         margin-top: 1%;
         margin-bottom: 1%;
-        width: 34%;
-        height: 100%;
+        width: 79%;
+        height: 97%;
         flex-shrink: 0;
     }
     .search__header {
-        width: 26%;
-        height: 80%;
-        flex-shrink: 0;
-        padding-left: 2%;
-        padding-bottom: 1%;
+        width: 45%;
+        height: 70%;
+        display: flex;
+        justify-self: end;
+        align-self: center;
     }
-    .icons__header {
-        width: 150%;
-        height: 80%;
+    .icon_menu__header {
+        width: 44%;
+        height: 45%;
+        grid-column-end: -3;
+        display: flex;
+        justify-self: end;
+        align-self: center;
+    }
+    .icon_character__header {
+        width: 40%;
+        height: 57%;
+        grid-column-end: -2;
+        display: flex;
+        justify-self: end;
+        align-self: center;
+    }
+    .icon_shop__header {
+        width: 40%;
+        height: 57%;
         grid-column-end: -1;
+        display: flex;
+        justify-self: end;
+        align-self: center;
+        position: relative;
+        padding-right: 15%;
+    }
+    .circle {
+        width: 2%;
+        height: 3%;
+        background: #F16D7F;
+        border-radius: 10px;
+        position: absolute;
+        grid-column-end: -1;
+        display: flex;
+        justify-self: end;
+        align-self: start;
+        margin-top: 0.5%;
+        text-align: end;
+        color: white;
+        font-weight: 100%;
     }
     .title_hello {
         background-color: #F1E4E6;
         display: grid;
-        grid-template-columns: 20% 60% 20%;
-        grid-template-rows: 80% 20%;
+        grid-template-columns: 50% 10% 40%;
     }
     .photo__main {
         width: 100%;
         height: 100%;
-        grid-column-start: 2;
+        grid-column-start: 1;
     }
     .rectangle {
         display: flex;
         margin-left: 4%;
         margin-right: 1%;
         align-self: center;
-        justify-self: start;
-        grid-row-start: 2;
+        justify-self: end;
         grid-column: 2;
-        height: 87%;
-        width: 2.6%;
+        width: 12.5%;
+        height: 20.5%;
     }
     .the_brand {
         display: flex;
         align-self: center;
-        justify-self: center;
-        grid-column-start: 2;
-        grid-row-start: 2;
+        justify-self: start;
+        padding-left: 44px;
+        grid-column-start: 3;
     }
     .brand {
         color: #222;
         font-family: Lato;
-        font-size: 28px;
+        font-size: 44px;
         font-style: normal;
         font-weight: 900;
         line-height: normal;
@@ -562,7 +659,7 @@
     .luxerious {
         color: #222;
         font-family: Lato;
-        font-size: 16px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -570,7 +667,7 @@
     .fashion {
         color: #F16D7F;
         font-family: Lato;
-        font-size: 16px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -578,12 +675,12 @@
     .sales {
         margin-top: 3%;
         display: grid;
-        grid-template-columns: 5% 1fr 5%;
-        grid-template-rows: repeat(4, 50%);
-        gap: 5%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 150% 100%;
+        gap: 1%;
     }
     .woman {
-        grid-column-start: 2;
+        grid-column-start: 1;
         grid-row-start: 1;
         position: relative;
         display: flex;
@@ -594,13 +691,15 @@
         filter: brightness(40%);
         display: flex;
         justify-self: center;
+        height: 100%;
+        width: 98%;
     }
     .woman .text_image {
-        position: relative;
+        position: absolute;
         text-align: center;
         display: flex;
+        justify-self: center;
         align-self: center;
-        margin-top: 20%;
     }
     .p_sales {
         color: #FFF;
@@ -622,7 +721,7 @@
     }
     .man {
         grid-column-start: 2;
-        grid-row-start: 2;
+        grid-row-start: 1;
         position: relative;
         display: flex;
         justify-content: space-around;
@@ -632,17 +731,19 @@
         filter: brightness(40%);
         display: flex;
         justify-self: center;
+        height: 100%;
+        width: 98%;
     }
     .man .text_image {
         position: relative;
         text-align: center;
         display: flex;
+        justify-self: center;
         align-self: center;
-        margin-top: 20%;
     }
     .kids {
-        grid-column-start: 2;
-        grid-row-start: 3;
+        grid-column-start: 3;
+        grid-row-start: 1;
         position: relative;
         display: flex;
         justify-content: space-around;
@@ -652,17 +753,21 @@
         filter: brightness(40%);
         display: flex;
         justify-self: center;
+        height: 100%;
+        width: 98%;
     }
     .kids .text_image {
         position: relative;
         text-align: center;
         display: flex;
+        justify-self: center;
         align-self: center;
-        margin-top: 20%;
     }
     .accessories {
-        grid-column-start: 2;
-        grid-row-start: 4;
+        margin-top: 2%;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
         position: relative;
         display: flex;
         justify-content: space-around;
@@ -672,16 +777,19 @@
         filter: brightness(40%);
         display: flex;
         justify-self: center;
-        width: 70%;
-        height: 50%;
+        padding-left: 1%;
+        width: 99%;
+        height: 100%;
     }
     .accessories .text_image {
         position: relative;
-        margin-left: 0;
-        margin-top: 5%;
+        text-align: center;
+        display: flex;
+        justify-self: center;
+        align-self: center;
     }
     .title {
-        padding-top: 75%;
+        margin-top: 42%;
         text-align: center;
     }
     .title h1 {
@@ -701,19 +809,28 @@
         line-height: normal;
     }
     .shop_grid {
-        margin-top: 3%;
+        margin: 2%;
         display: grid;
-        grid-template-columns: 30% 40% 30%;
-        grid-template-rows: repeat(12, 4r 1fr);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 3fr 1fr);
         gap: 2%;
         grid-row-gap: 0;
     }
     .shop_grid .shop_grid_img_1 {
-        grid-column-start: 2;
+        grid-column-start: 1;
         grid-row-start: 1;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+    }
+    .shop_grid .shop_grid_img_1 img {
+        width: 100%;
+        margin: 0 1%;
     }
     .shop_grid .shop_grid_text_1 {
-        grid-column-start: 2;
+        grid-column-start: 1;
         grid-row-start: 2;
         margin: 0 1% 2% 1%;
         background-color: #F8F8F8;
@@ -747,20 +864,54 @@
         line-height: normal;
     }
     .shop_grid .shop_grid_img_2 {
-        background-color: #F7E4E2;
+        background-color: #3A3838;
         grid-column-start: 2;
-        grid-row-start: 3;
+        grid-row-start: 1;
         display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
     }
     .shop_grid .img_shop_2 {
+        padding-left: 0;
         grid-column-start: 2;
-        grid-row-start: 3;
-        padding-left: 30%;
+        grid-row-start: 1;
+        display: flex;
+        justify-self: center;
         align-self: center;
+        filter: brightness(25%);
+    }
+    .add_to_cart {
+        visibility: visible;
+        position: absolute;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        background-color: transparent;
+        border-color: #FFFFFF;
+        border-radius: 0;
+        width: 30%;
+        height: 8%;
+    }
+    .add_to_cart img {
+        padding: 5%;
+    }
+    .add_to_cart span {
+        color: #FFFFFF;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin: 5%;
+        padding-top: 3%;
     }
     .shop_grid .shop_grid_text_2 {
         grid-column-start: 2;
-        grid-row-start: 4;
+        grid-row-start: 2;
         margin: 0 1% 2% 1%;
         background-color: #F8F8F8;
         position: relative;
@@ -793,17 +944,26 @@
         line-height: normal;
     }
     .shop_grid .shop_grid_img_3 {
-        grid-column-start: 2;
-        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-row-start: 3;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+    }
+    .shop_grid .shop_grid_img_3 img {
+        width: 100%;
+        margin: 0 1%;
     }
     .shop_grid .shop_grid_text_3 {
-        grid-column-start: 2;
-        grid-row-start: 6;
+        grid-column-start: 1;
+        grid-row-start: 4;
         margin: 0 1% 2% 1%;
         background-color: #F8F8F8;
         position: relative;
     }
-    .shop_grid .shop_grid_text_3 h1 {
+    .sho .shop_grid .shop_grid_text_3 h1 {
         color: #000;
         font-family: Lato;
         font-size: 13px;
@@ -832,22 +992,21 @@
     }
     .shop_grid .shop_grid_img_4 {
         grid-column-start: 2;
-        grid-row-start: 7;
-        margin-top: 5%;
+        grid-row-start: 3;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
     }
-    .shop_grid .shop_grid_img_5 {
-        grid-column-start: 2;
-        grid-row-start: 9;
-        margin-top: 5%;
-    }
-    .shop_grid .shop_grid_img_6 {
-        grid-column-start: 2;
-        grid-row-start: 11;
-        margin-top: 5%;
+    .shop_grid .shop_grid_img_4 img {
+        width: 100%;
+        margin: 0 1%;
     }
     .shop_grid .shop_grid_text_4 {
         grid-column-start: 2;
-        grid-row-start: 8;
+        grid-row-start: 4;
         margin: 0 1% 2% 1%;
         background-color: #F8F8F8;
         position: relative;
@@ -879,9 +1038,23 @@
         font-weight: 400;
         line-height: normal;
     }
+    .shop_grid .shop_grid_img_5 {
+        grid-column-start: 1;
+        grid-row-start: 5;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+    }
+    .shop_grid .shop_grid_img_5 img {
+        width: 100%;
+        margin: 0 1%;
+    }
     .shop_grid .shop_grid_text_5 {
-        grid-column-start: 2;
-        grid-row-start: 10;
+        grid-column-start: 1;
+        grid-row-start: 6;
         margin: 0 1% 2% 1%;
         background-color: #F8F8F8;
         position: relative;
@@ -913,9 +1086,23 @@
         font-weight: 400;
         line-height: normal;
     }
+    .shop_grid .shop_grid_img_6 {
+        grid-column-start: 2;
+        grid-row-start: 5;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+    }
+    .shop_grid .shop_grid_img_6 img {
+        width: 100%;
+        margin: 0 1%;
+    }
     .shop_grid .shop_grid_text_6 {
         grid-column-start: 2;
-        grid-row-start: 12;
+        grid-row-start: 6;
         margin: 0 1% 2% 1%;
         background-color: #F8F8F8;
         position: relative;
@@ -941,6 +1128,21 @@
     }
     .shop_grid .shop_grid_text_6 h3 {
         color: #F16D7F;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .view_all__footer {
+        border-color: #FF6A6A;
+        border: 1%;
+        border-radius: 0;
+        width: 212px;
+        height: 48px;
+        background-color: #FFFFFF;
+        margin: 2% 40% 5%;
+        color: #F26376;
         font-family: Lato;
         font-size: 16px;
         font-style: normal;
